@@ -1,0 +1,54 @@
+1. Register number of players
+- Use struct 
+    name
+    account
+
+- Create money buffers for all players and assign amount of money
+
+    player capital = 1000
+    computer capital = 1000
+    player stake
+    computer stake 
+        rand between 100 numbers
+        divide numbers by 10
+        multiply by 1000
+    common pool = player stake + computer stake
+
+
+
+
+
+- Each player to stake some money
+- subtract staked amount of money from all the players' money account
+    2. Draw cards for first player
+        rendomize the two cards
+        add the value of the two cards and store in a variable
+    3. Subtract drawn cards from the stack
+    4. Repeat Draw for subsequent players
+    5. Sort the variables for the drawn cards
+    6. Declare cards[0] as winner
+- Add staked amount of money from all the players' money account to the winner's account
+- Ask to play again.
+
+
+
+- After drawing, adding the card values, determine whether to continue drawing or not.
+player- Display prompt to indicate whether to draw again or not.
+
+computer
+write srand function that chooses between two numbers that determine whether the draw continues or not.
+
+~~~~~ The code can draw up to three times 
+~~~~~ The code draws froma  single stack
+~~~~~ A card can only be drawn once after which it cannot be drawn again.
+
+####### playerDrawHold else is empty.
+
+>> Registered players
+>> staked
+>> Asked for hold/ Draw
+
+###_DrawsCount = Number of times the player has drawn cards.
+- Count++ after each draw   
+    p_DrawCount;
+    c_DrawCount;
