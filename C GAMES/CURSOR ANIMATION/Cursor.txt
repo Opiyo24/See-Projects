@@ -1,0 +1,5 @@
+Create a buffer with newlines (Paragraph)
+animate using underscores wityh spaces ( _);
+animation sleep = 100000 microseconds
+animate upon reaching a specific character
+move cursor backwards and overwrite to make anination

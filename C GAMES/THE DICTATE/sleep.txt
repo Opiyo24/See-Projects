@@ -1,0 +1,27 @@
+#include <time.h>
+
+
+sleep()
+Function that delays execution of a program by a specified number of seconds taken in by the function as the arguments
+
+usleep()
+Function that delays execution of a program by a microecond taken in as an argument by the function.
+
+
+nanosleep()
+works same as usleep.
+
+- Has two arguments 
+    req - A pointer to a timespec structuire that specifies the sleep duration.
+    rem - A pointer to a timespec structure that receives the remaining time if the sleep is interrupted prematurely.
+
+    timespec structure ahs the following members
+        time_tv tv_sec; // seconds
+        long tv_nsec; //nanoseconds.
+
+
+    struct timespec
+    {
+        time_t tv_sec;
+        long tv_nsec;
+    };
