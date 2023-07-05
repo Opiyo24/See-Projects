@@ -262,10 +262,16 @@ void winner(int *num1, int *num2)
         printf("(winner) COMPUTER Capital: %d\n", c_capital);
         printf("(winner) COMPUTER Card value: %d\n", c_cardvalue);
 
-        if (p_cardValue = 21)
+        if (p_cardValue == 21)
+        {
             player_win();
-        else if (c_cardvalue = 21)
+            return;
+        }
+        else if (c_cardvalue == 21)
+        {
             computer_win();
+            return;
+        }
         // Evalueate winner, both card values are within 21 points.
         p_scoreDiff = max_draw - *num1;
         c_scoreDiff = max_draw - *num2;

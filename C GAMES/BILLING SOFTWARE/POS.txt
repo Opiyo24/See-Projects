@@ -1,0 +1,11 @@
+Generate invoice ( NEW INVOICE)
+Show invoices
+Search invoice
+Exit
+
+Whenever you use fgets, you need to deal with the last character 
+by replacin it with a null character.
+    ord.customer[strlen(ord.customer) - 1] = 0;
+
+Use strcpy() to copy one variable to another.
+__DATE__ - date statement

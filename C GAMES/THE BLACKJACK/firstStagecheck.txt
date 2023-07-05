@@ -1,56 +1,56 @@
-PS C:\Users\OPIYO\Documents\See-Projects\C GAMES\THE BLACKJACK> cd "c:\Users\OPIYO\Documents\See-Projects\C GAMES\THE BLACKJACK\" ; if ($?) { gcc blackjack.c -o blackjack } ; if ($?) { .\blackjack }
+        PS C:\Users\OPIYO\Documents\See-Projects\C GAMES\THE BLACKJACK> cd "c:\Users\OPIYO\Documents\See-Projects\C GAMES\THE BLACKJACK\" ; if ($?) { gcc blackjack.c -o blackjack } ; if ($?) { .\blackjack }
 
-(STAGE 1) PLAYER capital: 1000
-(STAGE 1) PLAYER Card value: 0
-(STAGE 1) COMPUTER Capital: 1000
-(STAGE 1) COMPUTER Card value: 0
-(STAGE 1) TOTAL STAKE: 0
-Stake limit = 1000
-How much would you like to stake?
-(No Decimals)
-STAKE: 300
-COMPUTER: 800
+        (STAGE 1) PLAYER capital: 1000
+        (STAGE 1) PLAYER Card value: 0
+        (STAGE 1) COMPUTER Capital: 1000
+        (STAGE 1) COMPUTER Card value: 0
+        (STAGE 1) TOTAL STAKE: 0
+        Stake limit = 1000
+        How much would you like to stake?
+        (No Decimals)
+        STAKE: 300
+        COMPUTER: 800
 
-TOTAL STAKE: 1100
+        TOTAL STAKE: 1100
 
-(STAGE 2) PLAYER capital: 700
-(STAGE 2) PLAYER Card value: 0
-(STAGE 2) COMPUTER Capital: 200
-(STAGE 2) COMPUTER Card value: 0
-(STAGE 2) TOTAL STAKE: 1100
-Computer: 14
-Player: 14
-(STAGE 3) PLAYER capital: 700
-(STAGE 3) PLAYER Card value: 14
-(STAGE 3) COMPUTER Capital: 200
-(STAGE 3) COMPUTER Card value: 14
-(STAGE 3) TOTAL STAKE: 1100
+        (STAGE 2) PLAYER capital: 700
+        (STAGE 2) PLAYER Card value: 0
+        (STAGE 2) COMPUTER Capital: 200
+        (STAGE 2) COMPUTER Card value: 0
+        (STAGE 2) TOTAL STAKE: 1100
+        Computer: 14
+        Player: 14
+        (STAGE 3) PLAYER capital: 700
+        (STAGE 3) PLAYER Card value: 14
+        (STAGE 3) COMPUTER Capital: 200
+        (STAGE 3) COMPUTER Card value: 14
+        (STAGE 3) TOTAL STAKE: 1100
 
-Reply with a  number: 
-1 - DRAW        2 - HOLD: 1
+        Reply with a  number: 
+        1 - DRAW        2 - HOLD: 1
 
-(STAGE 4) PLAYER capital: 700
-(STAGE 4) PLAYER Card value: 14
-(STAGE 4) COMPUTER Capital: 200
-(STAGE 4) COMPUTER Card value: 14
-(STAGE 4) TOTAL STAKE: 1100
+        (STAGE 4) PLAYER capital: 700
+        (STAGE 4) PLAYER Card value: 14
+        (STAGE 4) COMPUTER Capital: 200
+        (STAGE 4) COMPUTER Card value: 14
+        (STAGE 4) TOTAL STAKE: 1100
 
-(STAGE 8) PLAYER capital: 700
-(STAGE 8) PLAYER Card value: 17
-(STAGE 8) COMPUTER Capital: 200
-(STAGE 8) COMPUTER Card value: 14
-(STAGE 8) TOTAL STAKE: 1100
-Player: 17
-(STAGE 5) PLAYER capital: 700
-(STAGE 5) PLAYER Card value: 17
-(STAGE 5) COMPUTER Capital: 200
-(STAGE 5) COMPUTER Card value: 14
-(STAGE 5) TOTAL STAKE: 1100
+        (STAGE 8) PLAYER capital: 700
+        (STAGE 8) PLAYER Card value: 17
+        (STAGE 8) COMPUTER Capital: 200
+        (STAGE 8) COMPUTER Card value: 14
+        (STAGE 8) TOTAL STAKE: 1100
+        Player: 17
+        (STAGE 5) PLAYER capital: 700
+        (STAGE 5) PLAYER Card value: 17
+        (STAGE 5) COMPUTER Capital: 200
+        (STAGE 5) COMPUTER Card value: 14
+        (STAGE 5) TOTAL STAKE: 1100
 
-(winner) PLAYER capital: 700
-(winner) PLAYER Card value: 17
-(winner) COMPUTER Capital: 200
-(winner) COMPUTER Card value: 14
+    (winner) PLAYER capital: 700
+    (winner) PLAYER Card value: 17
+    (winner) COMPUTER Capital: 200
+    (winner) COMPUTER Card value: 14
 
 PLAYER BUSTS!!
 
