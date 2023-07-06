@@ -332,37 +332,57 @@ int max(int *num1, int *num2)
 void bust_computer_win()
 {
     printf("\nPLAYER BUSTS!!\n\nCOMPUTER WINS!!\n");
-    c_capital = c_capital + common_pool;
+    c_capital + common_pool;
     p_stake = 0;
     c_stake = 0;
     common_pool = 0;
+
+    printf("***********************************************\n");
+    printf("WINNER:\t\t\t\tCOMPUTER\n");
+    printf("WINNING CAPITAL:\t\t%d\n\n", c_capital);
+    printf("***********************************************\n");
 }
 
 void computer_win()
 {
     printf("\nYOU LOSE!!\n\nCOMPUTER WINS!!\n");
-    c_capital = c_capital + common_pool;
+    c_capital + common_pool;
     p_stake = 0;
     c_stake = 0;
     common_pool = 0;
+
+    printf("***********************************************\n");
+    printf("WINNER:\t\t\t\tCOMPUTER\n");
+    printf("WINNING CAPITAL:\t\t%d\n\n", c_capital);
+    printf("***********************************************\n");
 }
 
 void bust_player_win()
 {
     printf("\nCOMPUTER BUSTS!!\n\nYOU ARE THE WINNER!!\n\n");
-    p_capital = p_capital + common_pool;
+    p_capital + common_pool;
     p_stake = 0;
     c_stake = 0;
     common_pool = 0;
+
+    printf("***********************************************\n");
+    printf("WINNER:\t\t\t\tPLAYER  :)\n");
+    printf("WINNING CAPITAL:\t\t%d\n\n", p_capital);
+    printf("***********************************************\n");
 }
 
 void player_win()
 {
     printf("\nWINNER\nWINNER!!\n\nYOU ARE THE WINNER!!\n\n");
-    p_capital = p_capital + common_pool;
+    p_capital + common_pool;
     p_stake = 0;
     c_stake = 0;
     common_pool = 0;
+
+    printf("***********************************************\n");
+    printf("WINNER:\t\t\t\tPLAYER  :)\n");
+    printf("WINNING CAPITAL:\t\t%d\n\n", p_capital);
+    printf("***********************************************\n");
 }
 
 void valuetest(int stage)
