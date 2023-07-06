@@ -47,26 +47,26 @@
         (STAGE 5) COMPUTER Card value: 14
         (STAGE 5) TOTAL STAKE: 1100
 
-    (winner) PLAYER capital: 700
-    (winner) PLAYER Card value: 17
-    (winner) COMPUTER Capital: 200
-    (winner) COMPUTER Card value: 14
+        (winner) PLAYER capital: 700
+        (winner) PLAYER Card value: 17
+        (winner) COMPUTER Capital: 200
+        (winner) COMPUTER Card value: 14
 
-PLAYER BUSTS!!
+        PLAYER BUSTS!!
 
-COMPUTER WINS!!
+        COMPUTER WINS!!
 
-(STAGE 6) PLAYER capital: 1800
-(STAGE 6) PLAYER Card value: 21
-(STAGE 6) COMPUTER Capital: 1300
-(STAGE 6) COMPUTER Card value: 14
-(STAGE 6) TOTAL STAKE: 1100
+        (STAGE 6) PLAYER capital: 1800
+        (STAGE 6) PLAYER Card value: 21
+        (STAGE 6) COMPUTER Capital: 1300
+        (STAGE 6) COMPUTER Card value: 14
+        (STAGE 6) TOTAL STAKE: 1100
 
-(STAGE 7) PLAYER capital: 1800
-(STAGE 7) PLAYER Card value: 21
-(STAGE 7) COMPUTER Capital: 1300
-(STAGE 7) COMPUTER Card value: 14
-(STAGE 7) TOTAL STAKE: 1100
+        (STAGE 7) PLAYER capital: 1800
+        (STAGE 7) PLAYER Card value: 21
+        (STAGE 7) COMPUTER Capital: 1300
+        (STAGE 7) COMPUTER Card value: 14
+        (STAGE 7) TOTAL STAKE: 1100
 
 Player account: 1800
 Computer account: 1300

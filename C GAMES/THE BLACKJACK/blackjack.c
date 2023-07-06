@@ -32,6 +32,8 @@ void computer_win();
 void player_win();
 void subsequent_deal();
 void valuetest(int stage);
+void bust_player_win();
+void bust_computer_win();
 
 int main()
 {
@@ -58,7 +60,7 @@ int main()
     valuetest(stage3);
 
     // Display the card value for the player
-    printf("\nReply with a  number: \n1 - DRAW\t2 - HOLD: ");
+    printf("\nReply with a  number: \n1 - DRAW\t2 - HOLD\t3 - CASH OUT/ OPT OUT: ");
     scanf("%d", &response1);
 
     playerDrawHold(&response1);
@@ -234,7 +236,7 @@ void playerDrawHold(int *response)
         int stage4 = 4;
         valuetest(stage4);
     }
-    else
+    else if (*response == 2)
     {
         // When player decideds to hold.
         winner(&p_cardValue, &c_cardvalue);
@@ -257,25 +259,15 @@ void winner(int *num1, int *num2)
     {
         if (*num1 > 21 && *num2 <= 21)
         {
-            computer_win();
+            bust_computer_win();
             return;
         }
         else if (*num1 <= 21 && *num2 > 21)
         {
-            player_win();
+            bust_player_win();
             return;
         }
-        else
-        {
-            printf("\n\nB U S T\n");
-            p_capital = p_capital + p_stake;
-            c_capital = c_capital + c_stake;
-
-            int stage6 = 6;
-            valuetest(stage6);
-
-            return;
-        }
+       
     }
     else if (*num1 <= 21 && *num2 <= 21)
     {
@@ -296,6 +288,11 @@ void winner(int *num1, int *num2)
 
             p_capital = p_capital + p_stake;
             c_capital = c_capital + c_stake;
+            p_stake = 0;
+            c_stake = 0;
+            common_pool = 0;
+            p_cardValue = 0;
+            c_cardvalue = 0;
 
             int stage7 = 7;
             valuetest(stage7);
@@ -303,8 +300,21 @@ void winner(int *num1, int *num2)
             return;
         }
     }
-}
+    else if (*num1 > 21 && *num2 > 21)
+    {
+            printf("\n\nB U S T\n");
+            p_capital = p_capital + p_stake;
+            c_capital = c_capital + c_stake;
+            common_pool = 0;
+            p_stake = 0;
+            c_stake = 0;
 
+            int stage6 = 6;
+            valuetest(stage6);
+
+            return;
+    }
+}
 
 
 int max(int *num1, int *num2)
@@ -319,16 +329,40 @@ int max(int *num1, int *num2)
     }
 }
 
-void computer_win()
+void bust_computer_win()
 {
     printf("\nPLAYER BUSTS!!\n\nCOMPUTER WINS!!\n");
     c_capital = c_capital + common_pool;
+    p_stake = 0;
+    c_stake = 0;
+    common_pool = 0;
+}
+
+void computer_win()
+{
+    printf("\nYOU LOSE!!\n\nCOMPUTER WINS!!\n");
+    c_capital = c_capital + common_pool;
+    p_stake = 0;
+    c_stake = 0;
+    common_pool = 0;
+}
+
+void bust_player_win()
+{
+    printf("\nCOMPUTER BUSTS!!\n\nYOU ARE THE WINNER!!\n\n");
+    p_capital = p_capital + common_pool;
+    p_stake = 0;
+    c_stake = 0;
+    common_pool = 0;
 }
 
 void player_win()
 {
-    printf("\nCOMPUTER BUSTS!!\n\nYOU ARE THE WINNER!!\n\n");
+    printf("\nWINNER\nWINNER!!\n\nYOU ARE THE WINNER!!\n\n");
     p_capital = p_capital + common_pool;
+    p_stake = 0;
+    c_stake = 0;
+    common_pool = 0;
 }
 
 void valuetest(int stage)
@@ -338,6 +372,9 @@ void valuetest(int stage)
     printf("(STAGE %d) COMPUTER Capital: %d\n", stage, c_capital);
     printf("(STAGE %d) COMPUTER Card value: %d\n", stage, c_cardvalue);
     printf("(STAGE %d) TOTAL STAKE: %d\n", stage, common_pool);
+    printf("(STAGE %d) Common Pool: %d\n", stage, common_pool);
+    printf("(STAGE %d) Computer stake: %d\n", stage, c_stake);
+    printf("(STAGE %d) Player Stake: %d\n", stage, p_stake);
 }
 
 
