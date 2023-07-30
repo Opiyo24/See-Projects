@@ -14,7 +14,7 @@ int p_cardValue = 0;// The value of cards dealt to the player
 int c_cardvalue = 0; //Value of cards dealt to the computer
 int deal1, deal2, deal3; //Player's cards deal first, second and third time
 int counter1, counter2; //Index number for player's deal
-int cdeal1, cdeal2, cdeal3, cdeal4; //Number of computer deals
+int cdeal1 = 0, cdeal2 = 0, cdeal3 = 0, cdeal4 = 0; //Number of computer deals
 int ccounter1, ccounter2, ccounter3, ccounter4; //Computer deals index
 int draw_hold; //0Decision by the player whether to draw or hold
 int response1, response2; //Players response on whether to draw or hold
@@ -101,10 +101,7 @@ int main()
             printf("\nUNKNOWN SELECTION: Please Make A Valid Choice!.");
             break;
         }
-        return(0);
     }
-
-
     return(0);
 }
 
@@ -143,7 +140,7 @@ void computerstake(int *capital)
 
 void Deal()
 {
-    srand(time(NULL));
+    srand((unsigned int)time(NULL));
     // Player deal
     counter1 =  rand() % 12;
     deal1 = stack[counter1];
@@ -157,7 +154,7 @@ void Deal()
     p_cardValue = deal1 + deal2;
 
     // Computer deal
-    srand(time(NULL));
+    //srand(time(NULL));
     ccounter1 =  rand() % 12;
     cdeal1 = stack[ccounter1];
 
@@ -169,18 +166,22 @@ void Deal()
     cdeal2 = stack[ccounter2];
     c_cardvalue = cdeal1 + cdeal2;
 
-    srand(time(NULL));
+    srand((unsigned int)time(NULL));
     draw_hold = rand() % 2;
 
-    if (draw_hold == 1)
+    if (draw_hold == 0)
     {
         ccounter3 = rand() % 12;
         while (ccounter3 == ccounter1 || ccounter3 == ccounter2)
         {
             ccounter3 = rand() % 12;
             cdeal3 = stack[ccounter3];
-            c_cardvalue = cdeal1 + cdeal2 + cdeal3;  
+            c_cardvalue = cdeal1 + cdeal2 + cdeal3; 
+            printf("cdeal1 = %d\n", cdeal1);
+            printf("cdeal2 = %d\n", cdeal2);
+            printf("cdeal3 = %d\n", cdeal3);
         }
+        
     }
 }
 
@@ -276,7 +277,7 @@ void winner(int *num1, int *num2)
             player_win();
             return;
         }
-        else if (*num1 > *num2)
+        else if (*num1 < *num2)
         {
             computer_win();
             return;
@@ -332,7 +333,7 @@ int max(int *num1, int *num2)
 void bust_computer_win()
 {
     printf("\nPLAYER BUSTS!!\n\nCOMPUTER WINS!!\n");
-    c_capital + common_pool;
+    c_capital += common_pool;
     p_stake = 0;
     c_stake = 0;
     common_pool = 0;
@@ -346,7 +347,7 @@ void bust_computer_win()
 void computer_win()
 {
     printf("\nYOU LOSE!!\n\nCOMPUTER WINS!!\n");
-    c_capital + common_pool;
+    c_capital += common_pool;
     p_stake = 0;
     c_stake = 0;
     common_pool = 0;
@@ -360,7 +361,7 @@ void computer_win()
 void bust_player_win()
 {
     printf("\nCOMPUTER BUSTS!!\n\nYOU ARE THE WINNER!!\n\n");
-    p_capital + common_pool;
+    p_capital += common_pool;
     p_stake = 0;
     c_stake = 0;
     common_pool = 0;
@@ -374,7 +375,7 @@ void bust_player_win()
 void player_win()
 {
     printf("\nWINNER\nWINNER!!\n\nYOU ARE THE WINNER!!\n\n");
-    p_capital + common_pool;
+    p_capital += common_pool;
     p_stake = 0;
     c_stake = 0;
     common_pool = 0;
